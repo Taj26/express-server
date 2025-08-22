@@ -19,7 +19,11 @@ app.post("/register",(req,res)=>{
    
     res.json({msg:"user registered successfully"})
 })
-
+app.post("/students/:roll",(req,res)=>{
+  let id = req.params.roll;
+  console.log(id)
+  res.json(id)
+})
 
 app.listen(PORT,()=>{
     console.log(`Server is running at http://localhost:${PORT}`)
